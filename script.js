@@ -58,7 +58,7 @@ class Portfolio extends React.Component {
     }
 
     addStock(event) {
-        event.preventDefaul();
+        event.preventDefault();
         const portfolio = this.state.portfolio.slice();
 
         portfolio.push(this.state.form);
@@ -128,7 +128,7 @@ class Portfolio extends React.Component {
                     </div>
                     <form className="col-12 mt-2 mb-4" onSubmit={this.addStock}>
                         <input className="mx-2" name="name" type="text" placeholder="Name" onChange={this.handleFormChange} value={form.name} required />
-                        <input className="mx-2" name="shares_owned" type="number" placeholder="Shares" value={form.shares_owned} onChange={this.handleFormChange} />\
+                        <input className="mx-2" name="shares_owned" type="number" placeholder="Shares" value={form.shares_owned} onChange={this.handleFormChange} />
                         <input className="mx-2" name="cost_per_share" type="number" placeholder="Cost" value={form.cost_per_share} onChange={this.handleFormChange} />
                         <input className="mx-2" name="market_price" type="number" placeholder="Price" value={form.market_price} onChange={this.handleFormChange} />
                         <button className="btn btn-primary btn-small">add</button>
